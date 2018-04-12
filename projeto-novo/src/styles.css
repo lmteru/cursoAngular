@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+ 
+*{
+    background-color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*
+
+h1{
+    text-align: center;
+    margin: 17.5% auto 10px auto;
+}
+
+button{
+    margin: auto 45% 0 45%;
+    padding: 10px 10px 10px 10px;
+    background-color: deeppink;
+    text-align: center;
+}
+
+a{
+    margin: 20% auto 10% auto;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    color: firebrick;
+    display: flex;
+
+} */

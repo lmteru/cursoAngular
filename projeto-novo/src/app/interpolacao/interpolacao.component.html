@@ -1,0 +1,13 @@
+<p>
+  {{ retornaBaixinha() }}
+</p>
+
+
+<form>
+<input #inputText type="text" (mouseover)= highlight() (mouseout)= highlight() [class.yellow]= "retornaBoo()">
+  <input type="button" (click) = baixinhaRecebe(inputText.value)  value= "Mudar texto">
+</form>
+
+<p class = "lighten-4" [class.deep-purple]="retornaBoo()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, sapiente. 
+  Nemo praesentium alias vitae quos cum necessitatibus dolorum, quia ullam id aut repellendus 
+<span [class.red]="retornaBoo()">  蒙怪读愿母验坐吉料案白公游艺救难。排量。</span>quo molestiae harum, adipisci sit dolores. Enim!</p>

@@ -1,0 +1,19 @@
+
+<nav>
+  <div class="nav-wrapper pink accent-1">
+    <a class="brand-logo right">Logo</a>
+    <ul id="nav-mobile" class="left">
+      <li><a routerLink=''>Home</a></li>
+      <li><a routerLink='jogador'>Lista</a></li>
+      <li><a routerLink='lista'>Jogador</a></li>
+      <li><a [routerLink]='["time", nomeTime.value]'>Lista com Times</a></li>
+      <li><a routerLink='login'>LOGIN</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- <input type="text" #nomeTime> -->
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+

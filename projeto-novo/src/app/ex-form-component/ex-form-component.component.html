@@ -1,0 +1,16 @@
+
+<div [class.blue]="sexFld.value == 1" [class.pink]="sexFld.value == 2" class="card-content">
+  <form [class.blue]="sexFld.value == 1" [class.pink]="sexFld.value == 2">
+  
+  <input [(ngModel)] = "nameFld" type ="text">
+    <select  #sexFld (change)='0' class="browser-default" >
+        <option value="" disabled selected>Escolha o sexo</option>
+        <option value="1">HOMEM</option>
+        <option value="2">MULHER</option>
+      </select>
+    <p>{{ nameFld.value }}</p> 
+    <input type="button" value="CONCLUIR" (click)="invertAux()">
+</form>
+
+<h1 [class.visible]= "!isAux()" [class.blue]="sexFld.value == 1" [class.pink]="sexFld.value == 2"> {{ tratamento(nameFld.value, sexFld.value) }} </h1>
+</div>

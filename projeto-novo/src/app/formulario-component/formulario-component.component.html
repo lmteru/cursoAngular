@@ -1,0 +1,6 @@
+<input [(ngModel)]= "nameField" type= "text" pattern= "/^[a-zA-Z]+$i/" (blur)="testNome(nomeField)">
+<!-- <input [(ngModel)]= "senhaField" type= "text" pattern= '/(^([A-Za-z]*[0-9]+[!-/]+[A-Za-z]*)||([A-Za-z]*[!-/]+[0-9]+[A-Za-z]*)||([!-/]+[A-Za-z]*[0-9]+[A-Za-z]*)||([0-9]+[A-Za-z]*[!-/]+[A-Za-z]*))'> -->
+<input [(ngModel)] = "senhaField" type ="text" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?!.*[\W_\x7B-\xFF]).{6,15}$">
+
+<p >{{ nameField }} , {{ testNome(nomeField) }}</p> 
+<p >{{ senhaField }}, {{ testSenha(senhaField) }}</p>

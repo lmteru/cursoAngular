@@ -1,0 +1,16 @@
+<p>
+  lista-times works!
+</p>
+
+<table class="stripped">
+  <thead>
+    <th><a>NOME</a></th>
+    <th><a>Tecnico</a></th>
+    <th><a>isLibertadores</a></th>
+  </thead>
+  <tr *ngFor="let time of arrayTimes">
+    <th>{{ time.nome }}</th>
+    <th>{{ time.tecnico }}</th>
+    <th>{{ time.isLibertadores }}</th>
+  </tr>
+</table>

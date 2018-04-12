@@ -1,0 +1,108 @@
+<app-wrapper-component >
+  <table>
+    <thead>
+      <th>NOME</th>
+      <th>SOBRENOME</th>
+      <th>ID</th>
+      <th>SALARIO</th>
+      <th>SEDE</th>
+    </thead>
+    <tr *ngFor="let funcionario of funcionarios">
+      <th>{{ funcionario.nome }}</th>
+      <th>{{ funcionario.sobrenome }}</th>
+      <th>{{ funcionario.id }}</th>
+      <th>{{ funcionario.salario }}</th>
+      <th>{{ funcionario.sede }}</th>
+    </tr>
+  </table>
+</app-wrapper-component>
+
+<app-wrapper-component>
+  <table class="striped">
+    <thead>
+      <th>NOME</th>
+      <th>SOBRENOME</th>
+      <th>ID</th>
+      <th>SALARIO</th>
+      <th>SEDE</th>
+    </thead>
+    <tr *ngFor="let funcionario of funcionarios">
+      <th *ngIf="funcionario.id%2==0">{{ funcionario.nome }}</th>
+      <th *ngIf="funcionario.id%2==0">{{ funcionario.sobrenome }}</th>
+      <th *ngIf="funcionario.id%2==0">{{ funcionario.id }}</th>
+      <th *ngIf="funcionario.id%2==0">{{ funcionario.salario }}</th>
+      <th *ngIf="funcionario.id%2==0">{{ funcionario.sede }}</th>
+    </tr>
+  </table>
+</app-wrapper-component>
+
+<app-wrapper-component>
+  <table class="striped">
+    <thead>
+      <th>NOME</th>
+      <th>SOBRENOME</th>
+      <th>ID</th>
+      <th>SALARIO</th>
+      <th>SEDE</th>
+    </thead>
+    <tr *ngFor="let funcionario of funcionarios">
+      <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.nome }}</th>
+      <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.sobrenome }}</th>
+      <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.id }}</th>
+      <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.salario }}</th>
+      <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.sede }}</th>
+    </tr>
+  </table>
+  <a class="waves-effect waves-light btn" (click)="trocaSede()">troca sede</a>
+
+</app-wrapper-component>
+
+<app-wrapper-component>
+    <table class="striped">
+      <thead>
+        <th>NOME</th>
+        <th>SOBRENOME</th>
+        <th>ID</th>
+        <th>SALARIO</th>
+        <th>SEDE</th>
+      </thead>
+      <tr *ngFor="let funcionario of funcionarios">
+        <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.nome }}</th>
+        <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.sobrenome }}</th>
+        <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.id }}</th>
+        <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.salario }}</th>
+        <th *ngIf="funcionario.sede == mostraSede()">{{ funcionario.sede }}</th>
+      </tr>
+    </table>
+
+    <label>Browser Select</label>
+    <select class="browser-default" #selectedSede (change)='trocaSelected(selectedSede.value)'>
+      <option *ngFor="let sedeA of sedes" [value]= "sedeA" >{{ sedeA }}</option>
+    </select>
+  
+  </app-wrapper-component>
+
+  <app-wrapper-component>
+    <input type="text" #filtro [(ngModel)] = criterio>
+    <div class="center">
+      <a class="btn" (click)="aplicaFiltroNome()">APLICA FILTRO - NOME</a>
+      <a class="btn" (click)="aplicaFiltroSobreNome()">APLICA FILTRO - SOBRENOME</a>
+    </div>
+    <br>
+    <table>
+        <thead>
+          <th>NOME</th>
+          <th>SOBRENOME</th>
+          <th>ID</th>
+          <th>SALARIO</th>
+          <th>SEDE</th>
+        </thead>
+        <tr *ngFor="let funcionario of funcionarioSelc">
+          <th>{{ funcionario.nome }}</th>
+          <th>{{ funcionario.sobrenome }}</th>
+          <th>{{ funcionario.id }}</th>
+          <th>{{ funcionario.salario }}</th>
+          <th>{{ funcionario.sede }}</th>
+        </tr>
+      </table>
+  </app-wrapper-component>

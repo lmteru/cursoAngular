@@ -1,0 +1,14 @@
+<div class="background">
+    <label>Browser Select</label>
+    <select #cor (change)='0' class="browser-default" >
+      <option value="" disabled selected>Escolha a cor</option>
+      <option value="1">VERMELHO</option>
+      <option value="2">AZUL</option>
+      <option value="3">VERDE</option>
+    </select>
+</div>
+
+<div class="card-panel center column lighten-3" [class.red]="cor.value==1" [class.blue]="cor.value==2"
+[class.green]="cor.value==3"> 
+  {{ cor.value==1 ? "Vermelho": cor.value==2 ? "Azul": cor.value==3 ? "Verde":"" }} 
+</div>
